@@ -22,6 +22,19 @@ func (p *parser) parseVersion() (rerr error) {
 		return errors.Wrap(err, "invalid version")
 	}
 	if p.version.Major != 3 || p.version.Minor > 1 {
+		// Check if this is Swagger 2.0 and provide helpful conversion instructions
+		if p.version.Major == 2 {
+			return errors.Errorf("Swagger 2.0 is not supported\n\n"+
+				"ogen generates code from OpenAPI 3.x specifications.\n"+
+				"To convert Swagger 2.0 to OpenAPI 3.0, use one of these tools:\n\n"+
+				"  npm install -g swagger2openapi\n"+
+				"  swagger2openapi %s > openapi3.yaml\n"+
+				"  ogen --target ./output openapi3.yaml\n\n"+
+				"Or use an online converter:\n"+
+				"  https://converter.swagger.io/\n"+
+				"  https://github.com/Mermade/oas-kit",
+				p.rootFile.Name)
+		}
 		return errors.Errorf("unsupported version: %s", version)
 	}
 	return nil
