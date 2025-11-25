@@ -6,7 +6,7 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/ogen-go/ogen/gen/ir"
+	"github.com/lanej/ogen/gen/ir"
 )
 
 func TestCreateEqualityMethodSpec_ArrayDetection(t *testing.T) {

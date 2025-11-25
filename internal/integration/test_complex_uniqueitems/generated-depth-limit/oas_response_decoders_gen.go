@@ -9,8 +9,8 @@ import (
 
 	"github.com/go-faster/errors"
 	"github.com/go-faster/jx"
-	"github.com/ogen-go/ogen/ogenerrors"
-	"github.com/ogen-go/ogen/validate"
+	"github.com/lanej/ogen/ogenerrors"
+	"github.com/lanej/ogen/validate"
 )
 
 func decodeCreateItemsResponse(resp *http.Response) (res *CreateItemsOK, _ error) {

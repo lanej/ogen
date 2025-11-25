@@ -7,7 +7,7 @@ import (
 	"net/http"
 
 	"github.com/go-faster/jx"
-	ht "github.com/ogen-go/ogen/http"
+	ht "github.com/lanej/ogen/http"
 )
 
 func encodeAddStickerToSetRequest(

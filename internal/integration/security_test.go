@@ -10,8 +10,8 @@ import (
 	"github.com/go-faster/errors"
 	"github.com/stretchr/testify/require"
 
-	api "github.com/ogen-go/ogen/internal/integration/test_security"
-	"github.com/ogen-go/ogen/ogenerrors"
+	api "github.com/lanej/ogen/internal/integration/test_security"
+	"github.com/lanej/ogen/ogenerrors"
 )
 
 const customSecurityHeader = "X-Foo-Custom"

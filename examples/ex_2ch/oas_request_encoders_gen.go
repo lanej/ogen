@@ -8,9 +8,9 @@ import (
 	"net/http"
 
 	"github.com/go-faster/errors"
-	"github.com/ogen-go/ogen/conv"
-	ht "github.com/ogen-go/ogen/http"
-	"github.com/ogen-go/ogen/uri"
+	"github.com/lanej/ogen/conv"
+	ht "github.com/lanej/ogen/http"
+	"github.com/lanej/ogen/uri"
 )
 
 func encodeUserPassloginPostRequest(

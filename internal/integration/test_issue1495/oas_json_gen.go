@@ -8,9 +8,9 @@ import (
 
 	"github.com/go-faster/errors"
 	"github.com/go-faster/jx"
-	"github.com/ogen-go/ogen/_testdata/testtypes/baz/v2"
-	"github.com/ogen-go/ogen/json"
-	"github.com/ogen-go/ogen/validate"
+	"github.com/lanej/ogen/_testdata/testtypes/baz/v2"
+	"github.com/lanej/ogen/json"
+	"github.com/lanej/ogen/validate"
 )
 
 // Encode implements json.Marshaler.

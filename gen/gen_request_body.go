@@ -3,8 +3,8 @@ package gen
 import (
 	"github.com/go-faster/errors"
 
-	"github.com/ogen-go/ogen/gen/ir"
-	"github.com/ogen-go/ogen/openapi"
+	"github.com/lanej/ogen/gen/ir"
+	"github.com/lanej/ogen/openapi"
 )
 
 func (g *Generator) generateRequest(ctx *genctx, opName string, body *openapi.RequestBody) (*ir.Request, error) {

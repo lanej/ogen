@@ -7,10 +7,10 @@ import (
 	"github.com/go-faster/errors"
 	"github.com/go-faster/yaml"
 
-	"github.com/ogen-go/ogen"
-	"github.com/ogen-go/ogen/jsonpointer"
-	"github.com/ogen-go/ogen/location"
-	"github.com/ogen-go/ogen/openapi"
+	"github.com/lanej/ogen"
+	"github.com/lanej/ogen/jsonpointer"
+	"github.com/lanej/ogen/location"
+	"github.com/lanej/ogen/openapi"
 )
 
 type resolver struct {

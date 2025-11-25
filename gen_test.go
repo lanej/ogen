@@ -10,12 +10,12 @@ import (
 	"github.com/stretchr/testify/require"
 	"go.uber.org/zap/zaptest"
 
-	"github.com/ogen-go/ogen"
-	"github.com/ogen-go/ogen/gen"
-	"github.com/ogen-go/ogen/gen/genfs"
-	"github.com/ogen-go/ogen/gen/ir"
-	"github.com/ogen-go/ogen/location"
-	"github.com/ogen-go/ogen/openapi/parser"
+	"github.com/lanej/ogen"
+	"github.com/lanej/ogen/gen"
+	"github.com/lanej/ogen/gen/genfs"
+	"github.com/lanej/ogen/gen/ir"
+	"github.com/lanej/ogen/location"
+	"github.com/lanej/ogen/openapi/parser"
 )
 
 func testGenerate(t *testing.T, dir, filename string, data []byte, aliases ctAliases, ignore ...string) {
