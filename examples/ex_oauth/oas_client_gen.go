@@ -14,11 +14,11 @@ import (
 	"go.opentelemetry.io/otel/metric"
 	"go.opentelemetry.io/otel/trace"
 
-	"github.com/ogen-go/ogen/conv"
-	ht "github.com/ogen-go/ogen/http"
-	"github.com/ogen-go/ogen/ogenerrors"
-	"github.com/ogen-go/ogen/otelogen"
-	"github.com/ogen-go/ogen/uri"
+	"github.com/lanej/ogen/conv"
+	ht "github.com/lanej/ogen/http"
+	"github.com/lanej/ogen/ogenerrors"
+	"github.com/lanej/ogen/otelogen"
+	"github.com/lanej/ogen/uri"
 )
 
 // Client implements OAS client.

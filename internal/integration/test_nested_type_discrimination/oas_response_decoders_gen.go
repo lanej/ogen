@@ -5,7 +5,7 @@ package api
 import (
 	"net/http"
 
-	"github.com/ogen-go/ogen/validate"
+	"github.com/lanej/ogen/validate"
 )
 
 func decodeSendMessageResponse(resp *http.Response) (res *SendMessageOK, _ error) {

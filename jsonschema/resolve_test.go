@@ -11,8 +11,8 @@ import (
 	"github.com/go-faster/jx"
 	"github.com/stretchr/testify/require"
 
-	"github.com/ogen-go/ogen/jsonpointer"
-	"github.com/ogen-go/ogen/location"
+	"github.com/lanej/ogen/jsonpointer"
+	"github.com/lanej/ogen/location"
 )
 
 type external map[string]components

@@ -5,7 +5,7 @@ package api
 import (
 	"net/http"
 
-	"github.com/ogen-go/ogen/validate"
+	"github.com/lanej/ogen/validate"
 )
 
 func decodeNullableStringsResponse(resp *http.Response) (res *NullableStringsOK, _ error) {

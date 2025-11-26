@@ -7,10 +7,10 @@ import (
 	"time"
 
 	"github.com/go-faster/jx"
-	"github.com/ogen-go/ogen/json"
-	"github.com/ogen-go/ogen/middleware"
-	"github.com/ogen-go/ogen/ogenerrors"
-	"github.com/ogen-go/ogen/uri"
+	"github.com/lanej/ogen/json"
+	"github.com/lanej/ogen/middleware"
+	"github.com/lanej/ogen/ogenerrors"
+	"github.com/lanej/ogen/uri"
 )
 
 // OptionalParams is parameters of optional operation.

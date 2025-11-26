@@ -6,7 +6,7 @@ import (
 	"context"
 	"net/http"
 
-	ht "github.com/ogen-go/ogen/http"
+	ht "github.com/lanej/ogen/http"
 )
 
 // UnimplementedHandler is no-op Handler which returns http.ErrNotImplemented.

@@ -6,8 +6,8 @@ import (
 	"github.com/stretchr/testify/require"
 	"go.uber.org/zap/zaptest"
 
-	"github.com/ogen-go/ogen/gen/ir"
-	"github.com/ogen-go/ogen/openapi"
+	"github.com/lanej/ogen/gen/ir"
+	"github.com/lanej/ogen/openapi"
 )
 
 func TestGenerateSecurities(t *testing.T) {

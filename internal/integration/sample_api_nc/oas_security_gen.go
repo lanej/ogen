@@ -8,7 +8,7 @@ import (
 	"strings"
 
 	"github.com/go-faster/errors"
-	"github.com/ogen-go/ogen/ogenerrors"
+	"github.com/lanej/ogen/ogenerrors"
 )
 
 // SecurityHandler is handler for security parameters.

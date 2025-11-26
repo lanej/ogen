@@ -7,7 +7,7 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	api "github.com/ogen-go/ogen/internal/integration/test_any_parameters"
+	api "github.com/lanej/ogen/internal/integration/test_any_parameters"
 )
 
 type testAnyParameters struct{}

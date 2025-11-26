@@ -8,9 +8,9 @@ import (
 
 	"github.com/go-faster/errors"
 
-	"github.com/ogen-go/ogen/internal/xslices"
-	"github.com/ogen-go/ogen/openapi"
-	"github.com/ogen-go/ogen/uri"
+	"github.com/lanej/ogen/internal/xslices"
+	"github.com/lanej/ogen/openapi"
+	"github.com/lanej/ogen/uri"
 )
 
 type pathParser[P any] struct {

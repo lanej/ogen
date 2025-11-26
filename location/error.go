@@ -10,7 +10,7 @@ import (
 	"github.com/go-faster/yaml"
 	"go.uber.org/multierr"
 
-	"github.com/ogen-go/ogen/internal/xmaps"
+	"github.com/lanej/ogen/internal/xmaps"
 )
 
 var _ interface {

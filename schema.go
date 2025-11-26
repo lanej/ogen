@@ -8,7 +8,7 @@ import (
 	"github.com/go-faster/jx"
 	"github.com/go-faster/yaml"
 
-	"github.com/ogen-go/ogen/jsonschema"
+	"github.com/lanej/ogen/jsonschema"
 )
 
 // The Schema Object allows the definition of input and output data types.

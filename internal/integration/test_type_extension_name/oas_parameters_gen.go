@@ -6,13 +6,13 @@ import (
 	"net/http"
 
 	"github.com/go-faster/jx"
-	decimal3 "github.com/ogen-go/ogen/_testdata/testtypes/bar/decimal"
-	decimal2 "github.com/ogen-go/ogen/_testdata/testtypes/foo/decimal"
-	"github.com/ogen-go/ogen/conv"
-	"github.com/ogen-go/ogen/json"
-	"github.com/ogen-go/ogen/middleware"
-	"github.com/ogen-go/ogen/ogenerrors"
-	"github.com/ogen-go/ogen/uri"
+	decimal3 "github.com/lanej/ogen/_testdata/testtypes/bar/decimal"
+	decimal2 "github.com/lanej/ogen/_testdata/testtypes/foo/decimal"
+	"github.com/lanej/ogen/conv"
+	"github.com/lanej/ogen/json"
+	"github.com/lanej/ogen/middleware"
+	"github.com/lanej/ogen/ogenerrors"
+	"github.com/lanej/ogen/uri"
 )
 
 // OptionalParams is parameters of optional operation.

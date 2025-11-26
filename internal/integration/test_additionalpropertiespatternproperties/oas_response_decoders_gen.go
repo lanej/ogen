@@ -5,7 +5,7 @@ package api
 import (
 	"net/http"
 
-	"github.com/ogen-go/ogen/validate"
+	"github.com/lanej/ogen/validate"
 )
 
 func decodeAliveResponse(resp *http.Response) (res *AliveOK, _ error) {
