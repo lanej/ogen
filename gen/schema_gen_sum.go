@@ -1021,6 +1021,20 @@ func (g *schemaGen) oneOf(name string, schema *jsonschema.Schema, side bool) (*i
 
 	// Validate that we can actually discriminate variants after jxType deduplication
 	// This catches cases like arrays with different element types that both map to jx.Array
+	//
+	// We need to find at least one field that can discriminate all variants.
+	// If a field has overlapping enum values, we skip it and try other fields.
+	// Only fail if NO field can discriminate.
+
+	// Track fields that need discrimination but couldn't be discriminated
+	type undiscriminableField struct {
+		fieldName string
+		typeIDs   []string
+		reason    string
+	}
+	var undiscriminableFields []undiscriminableField
+	hasSuccessfulDiscriminator := false
+
 	for fieldName, fieldVariants := range sum.SumSpec.UniqueFields {
 		if len(fieldVariants) < 2 {
 			continue // Single variant, no need to discriminate
@@ -1039,8 +1053,28 @@ func (g *schemaGen) oneOf(name string, schema *jsonschema.Schema, side bool) (*i
 			// Try value-based discrimination (enum values)
 			canUse, discriminator, err := canUseValueDiscrimination(fieldName, fieldVariants)
 			if err != nil {
-				// Overlapping enum values or other validation error
-				return nil, errors.Wrap(err, "value-based discrimination failed")
+				// Overlapping enum values - record this but continue checking other fields
+				var typeIDs []string
+				for _, v := range sortedVariants {
+					for _, s := range sum.SumOf {
+						if s.Name != v.Name {
+							continue
+						}
+						for _, f := range s.JSON().Fields() {
+							if f.Tag.JSON == fieldName {
+								typeID := getFieldTypeID(f.Type)
+								typeIDs = append(typeIDs, fmt.Sprintf("%s: %s", s.Name, typeID))
+								break
+							}
+						}
+					}
+				}
+				undiscriminableFields = append(undiscriminableFields, undiscriminableField{
+					fieldName: fieldName,
+					typeIDs:   typeIDs,
+					reason:    err.Error(),
+				})
+				continue // Try next field
 			}
 			if canUse {
 				// Initialize map if needed
@@ -1051,6 +1085,7 @@ func (g *schemaGen) oneOf(name string, schema *jsonschema.Schema, side bool) (*i
 				sum.SumSpec.ValueDiscriminators[fieldName] = discriminator
 				// Remove from UniqueFields to avoid duplicate case statements in template
 				delete(sum.SumSpec.UniqueFields, fieldName)
+				hasSuccessfulDiscriminator = true
 				continue // This field can discriminate, move to next field
 			}
 
@@ -1113,7 +1148,7 @@ func (g *schemaGen) oneOf(name string, schema *jsonschema.Schema, side bool) (*i
 				// Fall through to the error below - array element discrimination alone is not sufficient
 			}
 
-			// Can't use value or array element discrimination, find type IDs for error message
+			// Can't use value or array element discrimination, record for potential error
 			var typeIDs []string
 			for _, v := range sortedVariants {
 				for _, s := range sum.SumOf {
@@ -1129,14 +1164,26 @@ func (g *schemaGen) oneOf(name string, schema *jsonschema.Schema, side bool) (*i
 					}
 				}
 			}
-
-			return nil, errors.Wrapf(
-				&ErrNotImplemented{Name: "type-based discrimination with same jxType"},
-				"field %q cannot discriminate variants (requires unsupported discrimination): %v",
-				fieldName,
-				typeIDs,
-			)
+			undiscriminableFields = append(undiscriminableFields, undiscriminableField{
+				fieldName: fieldName,
+				typeIDs:   typeIDs,
+				reason:    "no enum values for discrimination",
+			})
 		}
+	}
+
+	// If we have undiscriminable fields and no successful discriminator was found,
+	// we need to fail. But if at least one field can discriminate, we're okay.
+	if len(undiscriminableFields) > 0 && !hasSuccessfulDiscriminator {
+		// Use the first undiscriminable field for the error message
+		f := undiscriminableFields[0]
+		return nil, errors.Wrapf(
+			&ErrNotImplemented{Name: "type-based discrimination with same jxType"},
+			"field %q cannot discriminate variants (%s): %v",
+			f.fieldName,
+			f.reason,
+			f.typeIDs,
+		)
 	}
 
 	return sum, nil
