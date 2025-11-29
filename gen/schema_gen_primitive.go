@@ -88,7 +88,9 @@ func (g *schemaGen) validateEnumValues(s *jsonschema.Schema) error {
 
 	switch typ := s.Type; typ {
 	case jsonschema.Object, jsonschema.Array, jsonschema.Empty:
-		return &ErrNotImplemented{Name: "non-primitive enum"}
+		// Non-primitive enums are handled as "any" type in schema_gen.go
+		// Validation of enum values is skipped for these types
+		return nil
 	case jsonschema.Integer:
 		for idx, val := range s.Enum {
 			if _, ok := val.(int64); !ok {
