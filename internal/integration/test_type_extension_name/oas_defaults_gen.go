@@ -4,9 +4,9 @@ package api
 
 import (
 	"github.com/go-faster/jx"
-	decimal3 "github.com/ogen-go/ogen/_testdata/testtypes/bar/decimal"
-	decimal2 "github.com/ogen-go/ogen/_testdata/testtypes/foo/decimal"
-	"github.com/ogen-go/ogen/json"
+	decimal3 "github.com/lanej/ogen/_testdata/testtypes/bar/decimal"
+	decimal2 "github.com/lanej/ogen/_testdata/testtypes/foo/decimal"
+	"github.com/lanej/ogen/json"
 )
 
 // setDefaults set default value of fields.

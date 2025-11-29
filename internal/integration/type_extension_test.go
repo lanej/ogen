@@ -12,8 +12,8 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/ogen-go/ogen/_testdata/testtypes"
-	api "github.com/ogen-go/ogen/internal/integration/test_type_extension"
+	"github.com/lanej/ogen/_testdata/testtypes"
+	api "github.com/lanej/ogen/internal/integration/test_type_extension"
 )
 
 type testTypeHandler struct {

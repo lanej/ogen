@@ -7,9 +7,9 @@ import (
 	"net/http"
 
 	"github.com/go-faster/errors"
-	ht "github.com/ogen-go/ogen/http"
-	"github.com/ogen-go/ogen/middleware"
-	"github.com/ogen-go/ogen/ogenerrors"
+	ht "github.com/lanej/ogen/http"
+	"github.com/lanej/ogen/middleware"
+	"github.com/lanej/ogen/ogenerrors"
 )
 
 type codeRecorder struct {

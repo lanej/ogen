@@ -7,9 +7,9 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/ogen-go/ogen"
-	"github.com/ogen-go/ogen/jsonschema"
-	"github.com/ogen-go/ogen/openapi"
+	"github.com/lanej/ogen"
+	"github.com/lanej/ogen/jsonschema"
+	"github.com/lanej/ogen/openapi"
 )
 
 // Check that parser correctly handles paths with escaped slashes.

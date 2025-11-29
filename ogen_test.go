@@ -4,7 +4,7 @@ import (
 	"embed"
 	"testing"
 
-	"github.com/ogen-go/ogen/internal/testutil"
+	"github.com/lanej/ogen/internal/testutil"
 )
 
 //go:embed _testdata

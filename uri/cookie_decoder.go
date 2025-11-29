@@ -3,7 +3,7 @@ package uri
 import (
 	"net/http"
 
-	"github.com/ogen-go/ogen/validate"
+	"github.com/lanej/ogen/validate"
 
 	"github.com/go-faster/errors"
 )

@@ -7,8 +7,8 @@ import (
 
 	"github.com/go-faster/errors"
 
-	"github.com/ogen-go/ogen/gen/ir"
-	"github.com/ogen-go/ogen/openapi"
+	"github.com/lanej/ogen/gen/ir"
+	"github.com/lanej/ogen/openapi"
 )
 
 // Route describes route.

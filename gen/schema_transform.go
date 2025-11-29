@@ -1,7 +1,7 @@
 package gen
 
 import (
-	"github.com/ogen-go/ogen/jsonschema"
+	"github.com/lanej/ogen/jsonschema"
 )
 
 func transformSchema(schema *jsonschema.Schema) *jsonschema.Schema {

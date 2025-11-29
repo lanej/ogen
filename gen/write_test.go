@@ -5,9 +5,9 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/ogen-go/ogen/gen/ir"
-	"github.com/ogen-go/ogen/ogenregex"
-	"github.com/ogen-go/ogen/validate"
+	"github.com/lanej/ogen/gen/ir"
+	"github.com/lanej/ogen/ogenregex"
+	"github.com/lanej/ogen/validate"
 )
 
 // TestRegexStrings_CollectsAllPatternTypes is a regression test for ensuring

@@ -2,7 +2,7 @@
 
 package api
 
-import "github.com/ogen-go/ogen/validate"
+import "github.com/lanej/ogen/validate"
 
 // Equal compares two ParameterValue instances for equality.
 // The depth parameter prevents infinite recursion on nested objects.
