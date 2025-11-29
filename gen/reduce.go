@@ -9,11 +9,11 @@ import (
 	"github.com/go-faster/errors"
 	"go.uber.org/zap"
 
-	"github.com/ogen-go/ogen/gen/ir"
-	ogenjson "github.com/ogen-go/ogen/json"
-	"github.com/ogen-go/ogen/jsonschema"
-	"github.com/ogen-go/ogen/location"
-	"github.com/ogen-go/ogen/openapi"
+	"github.com/lanej/ogen/gen/ir"
+	ogenjson "github.com/lanej/ogen/json"
+	"github.com/lanej/ogen/jsonschema"
+	"github.com/lanej/ogen/location"
+	"github.com/lanej/ogen/openapi"
 )
 
 // reduceDefault implements convenient errors, representing common default

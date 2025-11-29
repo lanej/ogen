@@ -3,7 +3,7 @@
 package api
 
 import (
-	"github.com/ogen-go/ogen/validate"
+	"github.com/lanej/ogen/validate"
 )
 
 // validateUniqueWorkflowTransition checks for duplicate items in a slice using hash-based detection.

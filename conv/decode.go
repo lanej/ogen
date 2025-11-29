@@ -16,7 +16,7 @@ import (
 	"github.com/google/uuid"
 	"github.com/shopspring/decimal"
 
-	"github.com/ogen-go/ogen/json"
+	"github.com/lanej/ogen/json"
 )
 
 func ToInt(s string) (int, error) {

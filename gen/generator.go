@@ -11,13 +11,13 @@ import (
 	"go.uber.org/zap"
 	"golang.org/x/exp/maps"
 
-	"github.com/ogen-go/ogen"
-	"github.com/ogen-go/ogen/gen/ir"
-	"github.com/ogen-go/ogen/internal/xmaps"
-	"github.com/ogen-go/ogen/internal/xslices"
-	"github.com/ogen-go/ogen/jsonschema"
-	"github.com/ogen-go/ogen/openapi"
-	"github.com/ogen-go/ogen/openapi/parser"
+	"github.com/lanej/ogen"
+	"github.com/lanej/ogen/gen/ir"
+	"github.com/lanej/ogen/internal/xmaps"
+	"github.com/lanej/ogen/internal/xslices"
+	"github.com/lanej/ogen/jsonschema"
+	"github.com/lanej/ogen/openapi"
+	"github.com/lanej/ogen/openapi/parser"
 )
 
 // Generator is OpenAPI-to-Go generator.

@@ -1,4 +1,4 @@
-module github.com/ogen-go/ogen
+module github.com/lanej/ogen
 
 go 1.24.0
 

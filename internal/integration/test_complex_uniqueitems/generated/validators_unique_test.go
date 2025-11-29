@@ -3,7 +3,7 @@ package api
 import (
 	"testing"
 
-	"github.com/ogen-go/ogen/validate"
+	"github.com/lanej/ogen/validate"
 )
 
 // T041: Test validateUnique() with empty array (should pass)

@@ -9,10 +9,10 @@ import (
 	"time"
 
 	"github.com/go-faster/errors"
-	"github.com/ogen-go/ogen/conv"
-	ht "github.com/ogen-go/ogen/http"
-	"github.com/ogen-go/ogen/otelogen"
-	"github.com/ogen-go/ogen/uri"
+	"github.com/lanej/ogen/conv"
+	ht "github.com/lanej/ogen/http"
+	"github.com/lanej/ogen/otelogen"
+	"github.com/lanej/ogen/uri"
 	"go.opentelemetry.io/otel/attribute"
 	"go.opentelemetry.io/otel/codes"
 	"go.opentelemetry.io/otel/metric"
@@ -80,7 +80,7 @@ type Invoker interface {
 	OctetStreamEmptySchema(ctx context.Context) (OctetStreamEmptySchemaOK, error)
 	// OptionalHeaders invokes optionalHeaders operation.
 	//
-	// Https://github.com/ogen-go/ogen/issues/822.
+	// Https://github.com/lanej/ogen/issues/822.
 	//
 	// GET /optionalHeaders
 	OptionalHeaders(ctx context.Context) (*OptionalHeadersOK, error)
@@ -1048,7 +1048,7 @@ func (c *Client) sendOctetStreamEmptySchema(ctx context.Context) (res OctetStrea
 
 // OptionalHeaders invokes optionalHeaders operation.
 //
-// Https://github.com/ogen-go/ogen/issues/822.
+// Https://github.com/lanej/ogen/issues/822.
 //
 // GET /optionalHeaders
 func (c *Client) OptionalHeaders(ctx context.Context) (*OptionalHeadersOK, error) {

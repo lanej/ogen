@@ -17,8 +17,8 @@ import (
 	"go.uber.org/zap/zaptest"
 	"go.uber.org/zap/zaptest/observer"
 
-	api "github.com/ogen-go/ogen/internal/integration/sample_api"
-	"github.com/ogen-go/ogen/middleware"
+	api "github.com/lanej/ogen/internal/integration/sample_api"
+	"github.com/lanej/ogen/middleware"
 )
 
 func Logging(logger *zap.Logger) middleware.Middleware {

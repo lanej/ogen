@@ -6,7 +6,7 @@ import (
 	"fmt"
 	"math/big"
 
-	"github.com/ogen-go/ogen/ogenregex"
+	"github.com/lanej/ogen/ogenregex"
 )
 
 var regexMap = map[string]ogenregex.Regexp{

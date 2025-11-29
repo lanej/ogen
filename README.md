@@ -15,6 +15,18 @@ This is a fork of [ogen-go/ogen](https://github.com/ogen-go/ogen) with additiona
 
 ## Using This Fork
 
+**Install CLI:**
+```console
+GOPROXY=direct GOSUMDB=off go install github.com/lanej/ogen/cmd/ogen@v1.20.0
+```
+
+**As a dependency (new projects):**
+```go
+// go.mod
+require github.com/lanej/ogen v1.20.0
+```
+
+**As a drop-in replacement (existing projects using ogen-go/ogen):**
 ```go
 // go.mod
 require github.com/ogen-go/ogen v1.18.0

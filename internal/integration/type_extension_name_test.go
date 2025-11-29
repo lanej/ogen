@@ -10,7 +10,7 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	api "github.com/ogen-go/ogen/internal/integration/test_type_extension_name"
+	api "github.com/lanej/ogen/internal/integration/test_type_extension_name"
 )
 
 type testTypeNameHandler struct {

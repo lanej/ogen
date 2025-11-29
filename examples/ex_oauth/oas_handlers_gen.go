@@ -14,10 +14,10 @@ import (
 	semconv "go.opentelemetry.io/otel/semconv/v1.26.0"
 	"go.opentelemetry.io/otel/trace"
 
-	ht "github.com/ogen-go/ogen/http"
-	"github.com/ogen-go/ogen/middleware"
-	"github.com/ogen-go/ogen/ogenerrors"
-	"github.com/ogen-go/ogen/otelogen"
+	ht "github.com/lanej/ogen/http"
+	"github.com/lanej/ogen/middleware"
+	"github.com/lanej/ogen/ogenerrors"
+	"github.com/lanej/ogen/otelogen"
 )
 
 // handleAddPetRequest handles addPet operation.

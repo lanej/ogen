@@ -7,9 +7,9 @@ import (
 	"math/big"
 	"net/http"
 
-	ht "github.com/ogen-go/ogen/http"
-	"github.com/ogen-go/ogen/ogenregex"
-	"github.com/ogen-go/ogen/otelogen"
+	ht "github.com/lanej/ogen/http"
+	"github.com/lanej/ogen/ogenregex"
+	"github.com/lanej/ogen/otelogen"
 	"go.opentelemetry.io/otel"
 	"go.opentelemetry.io/otel/attribute"
 	"go.opentelemetry.io/otel/metric"

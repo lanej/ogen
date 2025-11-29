@@ -17,10 +17,10 @@ import (
 	"go.opentelemetry.io/otel/sdk/metric/metricdata/metricdatatest"
 	"go.opentelemetry.io/otel/sdk/resource"
 
-	api "github.com/ogen-go/ogen/internal/integration/sample_api"
-	"github.com/ogen-go/ogen/middleware"
-	"github.com/ogen-go/ogen/ogenerrors"
-	"github.com/ogen-go/ogen/otelogen"
+	api "github.com/lanej/ogen/internal/integration/sample_api"
+	"github.com/lanej/ogen/middleware"
+	"github.com/lanej/ogen/ogenerrors"
+	"github.com/lanej/ogen/otelogen"
 )
 
 type metricsTestHandler struct {

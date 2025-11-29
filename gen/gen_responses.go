@@ -5,10 +5,10 @@ import (
 
 	"github.com/go-faster/errors"
 
-	"github.com/ogen-go/ogen/gen/ir"
-	"github.com/ogen-go/ogen/internal/xmaps"
-	"github.com/ogen-go/ogen/jsonschema"
-	"github.com/ogen-go/ogen/openapi"
+	"github.com/lanej/ogen/gen/ir"
+	"github.com/lanej/ogen/internal/xmaps"
+	"github.com/lanej/ogen/jsonschema"
+	"github.com/lanej/ogen/openapi"
 )
 
 func (g *Generator) generateResponses(ctx *genctx, opName string, responses openapi.Responses) (_ *ir.Responses, err error) {

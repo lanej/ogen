@@ -8,7 +8,7 @@ import (
 	"github.com/go-faster/jx"
 	"github.com/stretchr/testify/require"
 
-	"github.com/ogen-go/ogen/validate"
+	"github.com/lanej/ogen/validate"
 )
 
 func TestOgenValidation(t *testing.T) {

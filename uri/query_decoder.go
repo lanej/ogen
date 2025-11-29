@@ -5,7 +5,7 @@ import (
 
 	"github.com/go-faster/errors"
 
-	"github.com/ogen-go/ogen/validate"
+	"github.com/lanej/ogen/validate"
 )
 
 type QueryDecoder struct {

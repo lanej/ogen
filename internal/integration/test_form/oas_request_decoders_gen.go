@@ -12,11 +12,11 @@ import (
 	"github.com/go-faster/errors"
 	"github.com/go-faster/jx"
 	"github.com/google/uuid"
-	"github.com/ogen-go/ogen/conv"
-	ht "github.com/ogen-go/ogen/http"
-	"github.com/ogen-go/ogen/ogenerrors"
-	"github.com/ogen-go/ogen/uri"
-	"github.com/ogen-go/ogen/validate"
+	"github.com/lanej/ogen/conv"
+	ht "github.com/lanej/ogen/http"
+	"github.com/lanej/ogen/ogenerrors"
+	"github.com/lanej/ogen/uri"
+	"github.com/lanej/ogen/validate"
 )
 
 func (s *Server) decodeOnlyFormRequest(r *http.Request) (
